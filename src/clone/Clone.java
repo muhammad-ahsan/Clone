@@ -10,20 +10,20 @@ package clone;
  *
  * @author Ahsan
  */
-class Book implements Cloneable{
-    
+class Book implements Cloneable {
+
     String Name;
     String Author;
-    public Object clone()
-     {
-         try{
-             return super.clone();
-         }
-        catch( CloneNotSupportedException e ){
-                return null;
-            }
+
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
         }
+    }
 }
+
 public class Clone {
 
     /**
@@ -36,9 +36,9 @@ public class Clone {
         B.Author = "Muhammad Ahsan";
         Book C = (Book) B.clone();
         C.Name = "C#";
-        
+
         System.out.println(B.Name);
         System.out.println(C.Name);
-        
+
     }
 }
